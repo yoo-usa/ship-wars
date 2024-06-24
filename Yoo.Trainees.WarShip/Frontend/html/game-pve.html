@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game vs. Bot</title>
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/game-pve.css" />
+    <link
+      rel="icon"
+      href="../img/favicon.ico"
+      type="image/x-icon"
+      sizes="32x32" />
+  </head>
+  <body>
+    <div class="background-animation"></div>
+    <div class="container">
+      <nav class="shipwars__navbar">
+        <a href="../index.html" class="shipwars__logo"></a>
+        <div class="navbar__list">
+          <ul>
+            <li><a style="user-select: none" href="../index.html">Home</a></li>
+            <li><a style="user-select: none" href="#">Friends</a></li>
+          </ul>
+          <div class="hamburger">
+            <i class="hamburger__icon fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+      <div class="counter">0</div>
+      <!-- Alle Schiffe werden implementiert -->
+      <main class="middle" id="ship_container">
+        <aside class="ship__selection" droppable="true">
+          <div
+            class="ship warship"
+            data-direction="horizontal"
+            data-size="4"
+            data-name="warship"
+            draggable="true"
+            id="warship1"></div>
+          <div
+            class="ship cruiser"
+            data-direction="horizontal"
+            data-size="3"
+            data-name="cruiser"
+            draggable="true"
+            id="cruiser1"></div>
+          <div
+            class="ship cruiser"
+            data-direction="horizontal"
+            data-size="3"
+            data-name="cruiser"
+            draggable="true"
+            id="cruiser2"></div>
+          <div
+            class="ship destroyer"
+            data-direction="horizontal"
+            data-size="2"
+            data-name="destroyer"
+            draggable="true"
+            id="destroyer1"></div>
+          <div
+            class="ship destroyer"
+            data-direction="horizontal"
+            data-size="2"
+            data-name="destroyer"
+            draggable="true"
+            id="destroyer2"></div>
+          <div
+            class="ship destroyer"
+            data-direction="horizontal"
+            data-size="2"
+            data-name="destroyer"
+            draggable="true"
+            id="destroyer3"></div>
+          <div
+            class="ship submarine"
+            data-direction="horizontal"
+            data-size="1"
+            data-name="submarine"
+            draggable="true"
+            id="submarine1"></div>
+          <div
+            class="ship submarine"
+            data-direction="horizontal"
+            data-size="1"
+            data-name="submarine"
+            draggable="true"
+            id="submarine2"></div>
+          <div
+            class="ship submarine"
+            data-direction="horizontal"
+            data-size="1"
+            data-name="submarine"
+            draggable="true"
+            id="submarine3"></div>
+          <div
+            class="ship submarine"
+            data-direction="horizontal"
+            data-size="1"
+            data-name="submarine"
+            draggable="true"
+            id="submarine4"></div>
+        </aside>
+
+        <button class="commit-button" id="commit_button">Commit</button>
+
+        <div id="game__board" class="board" droppable="true">
+          <div class="finish">
+            <p>You're finished!!! Waiting...</p>
+          </div>
+          <div class="error-popup__screen-blocker"></div>
+          <div class="screen-blocker"></div>
+        </div>
+
+        <div class="ring">
+          Loading
+          <span></span>
+        </div>
+
+        <div id="opponent__board" class="board"></div>
+
+        <div class="chatbox"></div>
+
+        <div class="error-popup">
+          <i
+            class="fa-sharp fa-solid fa-circle-exclamation fa-beat-fade fa-2xl"></i>
+          <p class="error-popup__text">failed to save ships</p>
+          <div class="error-popup__xmark-icon">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+
+        <div class="SRP">
+          <p>Play scissors rock paper to choos who starts</p>
+          <button class="scissors SRP-choice" data-choice="scissors">✂️</button>
+          <button class="rock SRP-choice" data-choice="rock">🪨</button>
+          <button class="paper SRP-choice" data-choice="paper">📄</button>
+        </div>
+      </main>
+    </div>
+    <script src="../js/styles-overrides.js"></script>
+    <script src="../js/API-ShipWars-ApiLink.js"></script>
+    <script src="../js/game.js"></script>
+    <script src="../js/math.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d6df3707cf.js"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
